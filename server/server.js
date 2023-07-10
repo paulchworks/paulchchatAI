@@ -33,7 +33,7 @@ app.post('/', async (req, res) => {
     },
     {
       "role": "user",
-      "content": ""
+      "content": ${prompt}
     }
   ],
   temperature: 1,
