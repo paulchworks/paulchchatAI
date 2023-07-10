@@ -24,9 +24,9 @@ app.get('/', async (req, res) => {
 app.post('/', async (req, res) => {
     try {
         const prompt = req.body.prompt;
-        const response = await openai.ChatCompletion.create(
-  model="gpt-3.5-turbo",
-  messages=[
+        const response = await openai.createChatCompletion({
+  model: "gpt-3.5-turbo",
+  messages: [
     {
       "role": "system",
       "content": "You are a financial expert"
@@ -36,13 +36,12 @@ app.post('/', async (req, res) => {
       "content": ""
     }
   ],
-  temperature=1,
-  max_tokens=256,
-  top_p=1,
-  frequency_penalty=0,
-  presence_penalty=0
-)
-
+  temperature: 1,
+  max_tokens: 256,
+  top_p: 1,
+  frequency_penalty: 0,
+  presence_penalty: 0,
+});
         res.status(200).send({
             bot: response.data.choices[0].text
         })
