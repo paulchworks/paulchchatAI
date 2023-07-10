@@ -24,13 +24,12 @@ app.get('/', async (req, res) => {
 app.post('/', async (req, res) => {
     try {
         const prompt = req.body.prompt;
-
-        const response = await openai.ChatCompletion.create({
-            model: "gpt-3.5-turbo",
-              messages=[
+        const response = await openai.ChatCompletion.create(
+  model="gpt-3.5-turbo",
+  messages=[
     {
       "role": "system",
-      "content": "You are a financial expert."
+      "content": "You are a financial expert"
     },
     {
       "role": "user",
