@@ -33,6 +33,22 @@ app.post('/v1/chat/completions', async (req, res) => {
     },
     {
       "role": "user",
+      "content": "Are you a financial expert?\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I am a financial expert. I can provide information and guidance on various financial topics such as budgeting, saving, investing, and managing debt. How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "What is your name?"
+    },
+    {
+      "role": "assistant",
+      "content": "My name is Grey Welkin. How can I assist you with your financial questions or concerns?"
+    }
+    {
+      "role": "user",
       "content": ${prompt}
     }
   ],
