@@ -27,7 +27,16 @@ app.post('/', async (req, res) => {
 
         const response = await openai.createCompletion({
             model: "gpt-3.5-turbo",
-            prompt: `${prompt}`,
+              messages=[
+    {
+      "role": "system",
+      "content": "You are a financial expert."
+    },
+    {
+      "role": "user",
+      "content": ""
+    }
+  ],
             temperature: 0.5,
             max_tokens: 3000,
             top_p: 1,
