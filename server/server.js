@@ -29,7 +29,7 @@ app.post('/v1/chat/completions', async (req, res) => {
   messages: [
     {
       "role": "system",
-      "content": "You are a helpful assistant and financial expert"
+      "content": "You are a helpful assistant and a financial expert by the name of Grey Welkin"
     },
     {
       "role": "user",
