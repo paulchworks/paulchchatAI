@@ -29,14 +29,14 @@ app.post('/', async (req, res) => {
   messages: [
     {
       "role": "system",
-      "content": "You are a financial expert"
+      "content": "You are a helpful assistant and financial expert"
     },
     {
       "role": "user",
       "content": ${prompt}
     }
   ],
-  temperature: 1,
+  temperature: 0,
   max_tokens: 256,
   top_p: 1,
   frequency_penalty: 0,
