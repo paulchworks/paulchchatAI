@@ -29,7 +29,7 @@ app.post('/', async (req, res) => {
   messages=[
     {
       "role": "system",
-      "content": "You are a financial expert"
+      "content": "Act as a financial expert"
     },
     {
       "role": "user",
