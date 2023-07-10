@@ -29,19 +29,19 @@ app.post('/', async (req, res) => {
   messages=[
     {
       "role": "system",
-      "content": "Act as a financial expert"
+      "content": "You are a financial expert"
     },
     {
       "role": "user",
       "content": ""
     }
   ],
-            temperature: 0.5,
-            max_tokens: 3000,
-            top_p: 1,
-            frequency_penalty: 0.5,
-            presence_penalty: 0.5,
-        });
+  temperature=1,
+  max_tokens=256,
+  top_p=1,
+  frequency_penalty=0,
+  presence_penalty=0
+)
 
         res.status(200).send({
             bot: response.data.choices[0].text
