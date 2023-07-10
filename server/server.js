@@ -33,7 +33,7 @@ app.post('/v1/chat/completions', async (req, res) => {
     },
     {
       "role": "user",
-      "content": "Are you a financial expert?\n"
+      "content": "Are you a financial expert?"
     },
     {
       "role": "assistant",
